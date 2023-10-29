@@ -1,0 +1,39 @@
+.homepage-body {
+    background-color: #2a2a3b;
+    font-family: 'Poppins', sans-serif; /* Using Poppins font */
+    color: #fff;
+  }
+  
+  .homepage-welcome-text {
+    font-size: 5em; /* Slightly smaller font size for the username */
+    text-align: center;
+    margin-top: 5%;
+  }
+  
+  .homepage-username {
+    font-size: 4em; /* Smaller font size for the username */
+  }
+  
+  .homepage-clickable-box {
+    background-color: #4a4a5b;
+    border-radius: 15px;
+    padding: 20px 40px;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Remove underline from link */
+    color: #fff; /* White text color for the link */
+    font-weight: bold; /* Bold text */
+  }
+  
+  .homepage-clickable-box:hover {
+    background-color: #6a6a7b;
+  }
+  
+  .homepage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+  }
