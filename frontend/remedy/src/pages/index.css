@@ -2,6 +2,9 @@
     background-color: #2a2a3b;
     font-family: 'Poppins', sans-serif; /* Using Poppins font */
     color: #fff;
+    background: linear-gradient(270deg, #2a2a3b, #4a4a5b);
+    background-size: 200% 200%;
+    animation: gradientBG 15s infinite;
   }
   
   .homepage-welcome-text {
@@ -9,11 +12,49 @@
     text-align: center;
     margin-top: 5%;
   }
+  .homepage-username:hover {
+    color: #7a00cc;
+    transform: rotate(-5deg);
+    cursor: pointer;
+}
   
   .homepage-username {
     font-size: 4em; /* Smaller font size for the username */
   }
-  
+  @keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.homepage-body::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  border: 2px solid #7a00cc;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.homepage-body:hover::before {
+  transform: scale(1.5);
+  opacity: 0.7;
+}
+
+body:hover .homepage-clickable-box:not(:hover) {
+  opacity: 0.7;
+}
+
+body:hover .homepage-welcome-text:not(:hover) {
+  opacity: 0.7;
+}
   .homepage-clickable-box {
     background-color: #4a4a5b;
     border-radius: 15px;
@@ -25,8 +66,37 @@
     text-decoration: none; /* Remove underline from link */
     color: #fff; /* White text color for the link */
     font-weight: bold; /* Bold text */
+    padding: 30px 60px; /* Increase padding to make the buttons bigger */
+    font-size: 1.5em; /* Increase font size for the button text */
+    transition: transform 0.3s, opacity 0.3s;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    animation: breathe 4s infinite;
   }
-  
+
+  @keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+
+  .homepage-body:hover .homepage-clickable-box:not(:hover) {
+    transform: scale(0.95); /* Slightly reduce the size of the non-hovered button */
+    opacity: 0.6; /* Reduce the opacity to dim it */
+  }
+
+  .homepage-clickable-box:hover {
+    transform: scale(1.1); /* Scale up the hovered button */
+    opacity: 1; /* Restore its full opacity */
+    z-index: 1; /* Ensure it appears above the other button */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
   .homepage-clickable-box:hover {
     background-color: #6a6a7b;
   }
@@ -36,4 +106,24 @@
     justify-content: center;
     align-items: center;
     height: 40vh;
+  }
+
+  @keyframes pulsateGlow {
+    0% {
+      text-shadow: 0 0 3px #7a00cc, 0 0 6px #7a00cc, 0 0 9px #7a00cc;
+      transform: scale(1);
+    }
+    50% {
+      text-shadow: 0 0 5px #7a00cc, 0 0 10px #7a00cc, 0 0 15px #7a00cc;
+      transform: scale(1.05);
+    }
+    100% {
+      text-shadow: 0 0 3px #7a00cc, 0 0 6px #7a00cc, 0 0 9px #7a00cc;
+      transform: scale(1);
+    }
+  }
+
+  .homepage-username {
+    font-size: 4em; /* Smaller font size for the username */
+    animation: pulsateGlow 1.5s infinite; /* Apply the animation */
   }

@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import './index.css'; // Import the specific CSS file
 
 const Home = () => {
-  const userName = "Rushi"; // Placeholder name
+  const userName = "User"; // Placeholder name
+
+
+
 
   return (
     <div className="homepage-body">
