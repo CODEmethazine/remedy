@@ -32,8 +32,8 @@ function YourComponent() {
             <Route path="/" element={<Home />} />
             <Route path="/confirmation" element={<Confirmation />} />
             <Route path="/setmeds" element={<SetMeds />} />
-            <Route path="/schedule" element={<Schedule />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/schedule" element={<Schedule />} />
           </Routes>
         </div>
       </div>
