@@ -1,67 +1,52 @@
-import React from "react";
 import './signup.css';
-
+import React, { useState } from 'react';
 
 const SignUp = () => {
-  let signupBtn = document.getElementById("signupBtn");
-  let signinBtn = document.getElementById("signinBtn");
-  let nameField = document.getElementById("nameField");
-  let title = document.getElementById("title");
+  const [showNameField, setShowNameField] = useState(true);
+  const [title, setTitle] = useState("Sign Up");
 
-  signinBtn.onclick = function () {
-    nameField.style.maxHeight = "0";
-    title.innerHTML = "Log in";
-    signupBtn.classList.add("disable");
-    signinBtn.classList.remove("disable");
-  }
+  const handleSignInClick = () => {
+    setShowNameField(false);
+    setTitle("Log In");
+  };
 
-  signupBtn.onclick = function () {
-    nameField.style.maxHeight = "60px";
-    title.innerHTML = "Sign Up";
-    signupBtn.classList.remove("disable");
-    signinBtn.classList.add("disable");
-  }
+  const handleSignUpClick = () => {
+    setShowNameField(true);
+    setTitle("Sign Up");
+  };
 
   return (
-    <body>
-      <div class="container">
-        <div class="form-box">
-          <h1 id="title"> Sign up</h1>
-          <form>
-            <div class="input-group">
-              <div class="input-field" id="nameField">
-                <i class="fa-solid fa-user"></i>
-                <input type="text" placeholder="Name" />
-              </div>
-              <div class="input-field">
-                <i class="fa-solid fa-envelope"></i>
-                <input type="email" placeholder="Email address" />
-              </div>
-              <div class="input-field">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Password" />
-              </div>
-
-              <div class="btn-field">
-                <button type="button" id="signupBtn">
-                  {" "}
-                  Sign up
-                </button>
-                <button type="button" id="signinBtn" class="disable">
-                  {" "}
-                  Log in
-                </button>
-              </div>
+    <div className="container">
+      <div className="form-box">
+        <h1>{title}</h1>
+        <form>
+          <div className="input-group">
+            <div className={`input-field ${showNameField ? '' : 'hidden'}`}>
+              <i className="fa-solid fa-user"></i>
+              <input type="text" placeholder="Name" />
             </div>
-          </form>
-        </div>
+            <div className="input-field">
+              <i className="fa-solid fa-envelope"></i>
+              <input type="email" placeholder="Email address" />
+            </div>
+            <div className="input-field">
+              <i className="fa-solid fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+
+            <div className="btn-field">
+              <button type="button" onClick={handleSignUpClick}>
+                Sign up
+              </button>
+              <button type="button" onClick={handleSignInClick} className={!showNameField ? 'disable' : ''}>
+                Log in
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
-      <script src="singupJS.js"></script>
-    </body>
-
+    </div>
   );
-
-
 };
 
 export default SignUp;
