@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3c00a0;
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Added to arrange elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    height: 9vh;
+    font-size: 30x;
+    color: #f0f0f0;
+}
+
+.medication-details {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    color: white;
+}
+
+.medication-field {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #3c00a0;
+}
+
+.value {
+    width: 80%; /* Adjusted width for text boxes */
+    border: 3px solid #3c00a0;
+    padding: 5px;
+    border-radius: 9px;
+    font-size: 12px;
+    color: #3c00a0;
+    background-color: white;
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+ .checkmark-button {
+    background-color: transparent;
+    color: green;
+    border: none;
+    padding: 10px 15px;
+    font-size: 65px; /* Increased font size for buttons */
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: transparent;
+    color: red;
+    border: none;
+    padding: 10px 15px;
+    font-size: 65px; /* Increased font size for buttons */
+    cursor: pointer;
+}
