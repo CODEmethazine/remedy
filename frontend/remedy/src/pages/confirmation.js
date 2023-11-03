@@ -7,7 +7,7 @@ const Confirmation = () => {
         <h1>Did you take your medication today?</h1>
         <div class="medication-details">
             <div class="medication-field">
-                <div class="label">Name of Medication</div>
+                <div class="label">Nam of Medication</div>
                 <div class="value">CODEmethazine...</div>
             </div>
             <div class="medication-field">
