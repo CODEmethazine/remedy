@@ -1,9 +1,8 @@
-# Taskssss
-
+# Taskssss (Add all tasks that need to be done here!)
 
 ## Customization Tasks
 
-## Signup 
+### Signup 
  - As of now, it is a simple sign up form, transform it into a login in form that has the option to signup if a user does not have an account
 
 
