@@ -1,5 +1,15 @@
 {
   "dependencies": {
     "react-router-dom": "^6.17.0"
-  }
+  },
+  "name": "remedy",
+  "description": "1. npm install in the frontend/remedy folder\r 2. npm install axios in the frontend/remedy/pages folder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
